@@ -15,8 +15,7 @@ try:
     browser.get(link)   
 
     cena = WebDriverWait(browser, 12).until(
-        EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".card-body #price"),'$100')
-    )
+        EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".card-body #price"),'$100'))# ждем пока цена не будет равна 100
     button1 = browser.find_element_by_css_selector(".btn#book")
     button1.click()
     x_element = browser.find_element_by_id("input_value")
